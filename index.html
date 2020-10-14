@@ -6,10 +6,7 @@
         <link href="styles.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,
         500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <script src="https://kit.fontawesome.com/c7e66ba1c6.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
     </head>
     <body>
@@ -34,6 +31,7 @@
 
             </header>
 
+            <!-- bar de recherche et filtres -->
             <section id="section-research">
 
                 <div id="research" class="placement">
@@ -46,16 +44,18 @@
 
                         <div class ="search-box">
 
+                            <!--logo de position-->
                             <div class="position">
 
-                                <i class="material-icons" style="color: black">&#xe55f;</i>
+                                <i class="fas fa-map-marker-alt"></i>
 
                             </div>
 
                             <input type="search" id="city-search" name="q" placeholder="Marseille, France">
 
+                            <!--bouton recherche-->
                             <div class="recherche">
-
+                                
                                 <button class="btn">Rechercher</button>
 
                             </div>
@@ -64,15 +64,17 @@
                 
                     </div>
 
+                    <!--les filtres de recherche-->
                     <div id="filter">
                         
                         <p>Filtres</p>
 
+                        <!-- filtre-1 -->
                         <div id="eco" class="btn-filter">
                             
                             <button class="img-filtre">
                                 
-                                <i class='fas fa-money-bill-wave' style='font-size:24px; color:#0171ff'></i>
+                                <i class='fas fa-money-bill-wave'></i>
                             
                             </button>
 
@@ -80,33 +82,37 @@
 
                         </div>
 
+                        <!-- filtre-2 -->
                         <div id="fam" class="btn-filter">
                             
                             <button class="img-filtre">
                                 
-                                <i class='fas fa-child' style='font-size:24px; color:#0171ff'></i>
+                                <i class='fas fa-child'></i>
                             
                             </button>
 
                             <p class="keywords">Familial</p>
                         
                         </div>
+
+                        <!-- filtre-3 -->
                         <div id="rom" class="btn-filter">
                             
                             <button class="img-filtre">
                                 
-                                <i class='fas fa-heart' style='font-size:24px; color:#0171ff'></i>
+                                <i class='fas fa-heart'></i>
                             
                             </button>
 
                             <p class="keywords">Romantique</p>
                         </div>
 
+                        <!-- filtre-4 -->
                         <div id="ani" class="btn-filter">
                             
                             <button class="img-filtre">
                                 
-                                <i class='fas fa-dog' style='font-size:24px; color:#0171ff'></i>
+                                <i class='fas fa-dog'></i>
                             
                             </button>
 
@@ -121,61 +127,212 @@
 
             </section>
 
-            <section id="section-housing-result">
+            <!--Résultat des recherches-->
+            <section id="section-housing-result" class="placement">
 
-                <div id="info-city" class="placement">
+                <!--Info sur les biens disponilbes dans la ville-->
+                <div id="info-city" >
 
                     <div id="leter-i"><i class="fa fa-info" style="font-size:15px; color:#0171ff"></i></div>
 
                     <p>Plus de 500 logements sont disponible dans cette ville</p>
-
-                    
-
+     
                 </div>
 
+                <!--Résultat des hébergements dispo dans la ville rechercher-->
                 <div id="containt-housing" class="placement">
 
                     <p>Hébergements à Marseille</p>
 
-                    <div id="accommodation">
+                    <!--Tableau des résultats-->
+                    <div id="accommodation-grid">
 
-                        <div class="result-accommodation">
+                        <!-- résultat-1 -->
+                        <a href="#" class="result-accommodation">
 
-                            <div class="describe-accommodation">
-                                <p></p>
-                            </div>
-                        </div>
+                            <!-- Image et déscription du bien-1 -->
+                            <div class="container-img-and-describe">
 
-                        <div>
-                            <div class="describe-accommodation">
-                                <p></p>
-                            </div>
-                        </div>
+                                <!--Image du bien-->
+                                <div class= "box-img">
+                                    <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
+                                    alt="images-de-l'Auberge-la-Cannebière">
+                                </div>
+                                <!--déscription du bien-->
+                                <div class="describe-accommodation">
+                                    
+                                    <div class="information">
+                                        <p class="location">Aubergela Cannebière</p>
+                                        <p class="price">Nuit à partir de 25€</p>
+                                    </div>
 
-                        <div>
-                            <div class="describe-accommodation">
-                                <p></p>
-                            </div>
-                        </div>
+                                    <!--le nombre d'etoile du bien-->
+                                    <div>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;'></i>
+                                    </div>
+                                </div>
+                            </div>    
+                        </a>
 
-                        <div>
-                            <div class="describe-accommodation">
-                                <p></p>
-                            </div>
-                        </div>
+                        <!-- résultat-2 -->
+                        <a href="#" class="result-accommodation">
 
-                        <div>
-                            <div class="describe-accommodation">
-                                <p></p>
-                            </div>
+                            <!-- Image et déscription du bien-2 -->
+                            <div class="container-img-and-describe">
 
-                        </div>
-                        <div>
-                            <div class="describe-accommodation">
-                                <p></p>
-                            </div>
+                                <!--Image du bien-->
+                                <div class= "box-img">
+                                    <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                                    alt="images-de-l'Hotel-du-port">
+                                </div>
+                                <!--déscription du bien-->
+                                <div class="describe-accommodation">
+                                    
+                                    <div class="information">
+                                        <p class="location">Hôtel du port</p>
+                                        <p class="price">Nuit à partir de 52€</p>
+                                    </div>
 
-                        </div>
+                                    <!--le nombre d'etoile du bien-->
+                                    <div>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    </div>
+                                </div>
+                            </div>       
+                        </a>
+
+                        <!-- résultat-3 -->
+                        <a href="#" class="result-accommodation">
+
+                            <!-- Image et déscription du bien-3 -->
+                            <div class="container-img-and-describe">
+
+                                <!--Image du bien-->
+                                <div class= "box-img">
+                                    <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                                    alt="images-de-l'hotel-les-mouettes">
+                                </div>
+                                <!--déscription du bien-->
+                                <div class="describe-accommodation">
+                                    
+                                    <div class="information">
+                                        <p class="location">Hôtel Les mouettes</p>
+                                        <p class="price">Nuit à partir de 76€</p>
+                                    </div>
+
+                                    <!--le nombre d'etoile du bien-->
+                                    <div>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;'></i>
+                                    </div>
+                                </div>
+                            </div>    
+                            
+                        </a>
+
+                        <!-- résultat-4 -->
+                        <a href="#" class="result-accommodation">
+
+                            <!-- Image et déscription du bien-4 -->
+                            <div class="container-img-and-describe">
+
+                                <!--Image du bien-->
+                                <div class= "box-img">
+                                    <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                                    alt="images-de-l'hôtel-de-la-mer">
+                                </div>
+                                <!--déscription du bien-->
+                                <div class="describe-accommodation">
+                                    
+                                    <div class="information">
+                                        <p class="location">Hôtel de la mer</p>
+                                        <p class="price">Nuit à partir de 46€</p>
+                                    </div>
+
+                                    <!--le nombre d'etoile du bien-->
+                                    <div>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;'></i>
+                                    </div>
+                                </div>
+                            </div>    
+                        </a>
+
+                        <!-- résultat-5 -->
+                        <a href="#" class="result-accommodation">
+
+                            <!-- Image et déscription du bien-1 -->
+                            <div class="container-img-and-describe">
+
+                                <!--Image du bien-->
+                                <div class= "box-img">
+                                    <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                                    alt="images-de-l'Auberge-le-panier">
+                                </div>
+                                <!--déscription du bien-->
+                                <div class="describe-accommodation">
+                                    
+                                    <div class="information">
+                                        <p class="location">Auberge le Panier</p>
+                                        <p class="price">Nuit à partir de 23€</p>
+                                    </div>
+
+                                    <!--le nombre d'etoile du bien-->
+                                    <div>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;'></i>
+                                    </div>
+                                </div>
+                            </div>    
+                        </a>
+
+                        <!-- résultat-6 -->
+                        <a href="#" class="result-accommodation">
+                            
+                            <!-- Image et déscription du bien-1 -->
+                            <div class="container-img-and-describe">
+
+                                <!--Image du bien-->
+                                <div class= "box-img">
+                                    <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                                    alt="images-de-l'hôtel-chez-Amina">
+                                </div>
+                                <!--déscription du bien-->
+                                <div class="describe-accommodation">
+                                    
+                                    <div class="information">
+                                        <p class="location">Hôtel chez Amina</p>
+                                        <p class="price">Nuit à partir de 96€</p>
+                                    </div>
+
+                                    <!--le nombre d'etoile du bien-->
+                                    <div>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                        <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    </div>
+                                </div>
+                          </div> 
+                        </a>   
                     </div>
 
                     <button id="more">Afficher plus</button>
@@ -185,7 +342,88 @@
 
             </section>
 
-            <aside id="section-3">
+            <aside id="most-popular" class="placement">
+
+                <div id="containt-popular">
+
+                    <div id="title-popular">
+                        
+                        <p>Les plus populaires</p>
+                        <i class='fas fa-chart-line' style='font-size: 20px;color: black;'></i>
+                    </div>
+
+                    <div id="container-popular">
+
+                        <a href="#" class="result-popular">
+
+                            <div class="describe-popular">
+
+                                <div class="information">
+
+                                    <p class="location">Hôtel Le soleil du matin</p>
+                                    <p class="price">Nuit à partir de 128€</p>
+
+                                </div>
+
+                                <div class="notes-stars">
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                </div>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="result-popular">
+                            <div class="describe-popular">
+
+                                <div class="information">
+
+                                    <p class="location">Au coeur de l'eau <br/>Chambres d'hôtes</p>
+                                    <p class="price">Nuit à partir de 71€</p>
+
+                                </div>
+
+                                <div class="notes-stars">
+
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;'></i>
+
+                                </div>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="result-popular">
+
+                            <div class="describe-popular">
+
+                                <div class="information">
+
+                                    <p class="location">Hôtel Tout bleu et Blanc</p>
+                                    <p class="price">Nuit à partir de 65€</p>
+
+                                </div>
+
+                                <div class="notes-stars">
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #0171ff;'></i>
+                                    <i class='fas fa-star' style='font-size:10px; color: #dbdbdb;'></i>
+                                </div>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </aside>
 

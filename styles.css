@@ -16,16 +16,17 @@ body{
     grid-template-rows: 90px 270px 745px 573px 209px;
     grid-template-areas:
         "head head"
-        "section-1 section-1"
-        "section-2 section-3"
+        "section-research section-research"
+        "section-housing-result most-popular"
         "section-4 section-4"
         "footer footer";
 }
 
+/* Assignation de marge de 53px a droite et à gauche*/
 .placement{
 
-    margin-left: 53px;
-    margin-right: 53px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 em{
 
@@ -44,14 +45,14 @@ header{
     align-items: flex-end;
     
 }
-
+/*navigateur du site*/
 header > nav{
 
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
+/* le logo réservia*/
 header > nav > #logo-reservia{
 
     size: 100px;
@@ -64,9 +65,7 @@ header > nav > #navigation{
     display: flex;
     justify-content: space-around;
     width: 490px;
-    list-style: none;
-    
-    
+    list-style: none;  
 }
 
 #navigation > li{
@@ -112,11 +111,11 @@ header > nav > #navigation{
 
 }
 
-/*section-research*/
+/*<!bar de recherche et filtres*/
 
 #section-research{
 
-    grid-area: section-1;
+    grid-area: section-research;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,6 +173,9 @@ header > nav > #navigation{
     border: none;
 }
 
+.btn:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
 
 input{
@@ -189,15 +191,9 @@ input{
     padding-left: 20px;
 }
 
-#filter{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 940px;
-    height: auto;
-}
 
+/*bouton de recherche*/
 .btn-filter{
 
     position: relative;
@@ -213,6 +209,24 @@ input{
     
 }
 
+.btn-filter:hover{
+
+    border: 2px solid #0171ff;
+    background-color: #0171ff;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+
+#filter{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+    height: auto;
+}
+/*Les images des filtres*/
 .img-filtre{
 
     display: flex;
@@ -226,6 +240,35 @@ input{
     outline: none;
 }
 
+
+.fa-money-bill-wave{
+
+    font-size: 24px;
+    color: #0171ff;
+}
+
+.fa-child{
+
+    font-size:24px;
+    color:#0171ff;
+}
+
+.fa-heart{
+
+    font-size:24px;
+    color:#0171ff;
+}
+
+.fa-dog{
+
+    font-size:24px;
+    color:#0171ff;
+}
+
+
+
+
+/*texte des filtres*/
 .keywords{
 
     padding-left: 20px;
@@ -234,13 +277,15 @@ input{
 }
 
 
+/* les résultats des recherches*/
 
 #section-housing-result{
 
-    grid-area: section-2;
+    grid-area: section-housing-result;
 
 }
 
+/*Info sur les biens disponilbes dans la ville*/
 #info-city{
 
     display: flex;
@@ -268,24 +313,28 @@ input{
     font-weight: lighter;   
 }
 
+/* Résultat des recherches */
 #containt-housing{
 
-    width: 1fr;
-    height: 630px;
+    max-width: 100%;
+    min-width: 675px;
+    height: 90%;
     background-color: #f2f2f2;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-right: 0px;
+    justify-content: space-around;
 }
 
 #containt-housing > p{
 
     font-size: 1.2rem;
+    position: relative;
     font-weight: 600;
     margin-left: 40px;
 }
-
+/* Bouton Afficher plus */
 #more{
 
     align-self: flex-start;
@@ -293,14 +342,210 @@ input{
     border: none;
     font-weight: 600;
     font-size: 0.9rem;
+    outline: none;
 }
 
-#section-3{
+/*Tableau des résultats*/
+#accommodation-grid{
+    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: column;
+    padding: 40px;
+    row-gap: 5px;
+    column-gap: 5px;
+    justify-items: center;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-areas: 
+        "child-1 child-2 child-3"
+        "child-4 child-5 child-6"
+    ;
+    height: 75%;
+}
 
-    grid-area: section-3;
-    background-color: red;
+
+.result-accommodation{
+
+    display: flex;
+    margin: 5px;
+    height: 200px;
+    min-width: 172px;
+    max-width: 250px;
+    border: 3px solid #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: black;
+    overflow: hidden; 
+}
+
+.result-accommodation:hover{
+
+    box-shadow: 0 0 5px rgba(48, 33, 33, 2);
+}
+
+/* Image et déscription du bien-1 */
+.container-img-and-describe{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.result-accommodation > .container-img-and-describe > .box-img{
+
+    
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    overflow: hidden;
+}
+/* Image du bien */
+.result-accommodation > .container-img-and-describe > .box-img > img{
+
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* déscription du bien */
+.result-accommodation > .container-img-and-describe > .describe-accommodation{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35%;
+    background-color: #ffffff;
+    padding-left: 20px;
+    
+}
+
+.information{
+
+    line-height: 5px;
+    font-size: 0.85rem;
+}
+
+.location{
+
+    font-weight: bolder;
+}
+
+#most-popular{
+
+    grid-area: most-popular;
+    
 
 }
+
+#most-popular > #containt-popular{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    height: 90%;
+    margin-top: 50px;
+    margin-left: 0px;
+    padding-left:40px;
+    padding-right: 40px;
+    border-radius: 40px;
+    background-color: #f2f2f2;
+
+}
+
+
+
+
+#most-popular > #containt-popular > #title-popular{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    align-items: center;
+    width: 100%;
+    
+}
+
+
+#container-popular{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 590px;
+    min-width: 100px;
+
+    justify-content: space-around;
+
+}
+
+#container-popular > .result-popular{
+
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 450px;
+    min-width: 300px;
+    height: 150px;
+    border: 3px solid #ffffff;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    
+}
+
+#container-popular > .result-popular:nth-child(1){
+
+    background-image: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+    background-position: -40px 0px;
+    background-size: 50%;
+
+}
+
+#container-popular > .result-popular:nth-child(1):hover{
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 2);
+
+}
+
+
+.result-popular > .describe-popular{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    min-width: 210px;
+    background-color: #ffffff;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+
+
+}
+
+.result-popular > .describe-popular > .information, .notes-stars{
+
+    margin-left: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 15px;
+    color: black;
+}
+
+
+
 
 #section-4{
 
@@ -308,6 +553,147 @@ input{
     background-color: yellow;
 
 }
+
+@media (max-width: 1200px){
+
+    #containeur{
+
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 90px 300px 745px 573px 209px;
+        grid-template-areas:
+            "head head"
+            "section-research section-research"
+            "section-housing-result most-popular"
+            "section-4 section-4"
+            "footer footer";
+    }
+   
+    /*navigateur du site*/
+    header > nav{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    header > nav > #navigation{
+
+        height: auto;
+        width: 100%;
+    }
+
+    header > nav > #logo-reservia{
+
+        align-self: center;
+    }
+
+    #navigation > li{
+
+        padding-top: 0px; 
+    }
+
+    /*<!bar de recherche et filtres*/
+
+    em{
+
+        font-size: 1rem;
+    }
+
+    #section-research > #research{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #section-research > #research > p{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: lighter;
+        line-height: 1.5;
+    
+    }
+
+    #filter{
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    /*texte des filtres*/
+    
+
+    .keywords:hover{
+
+        
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bolder;
+        }
+
+    /*Tableau des résultats*/
+    #accommodation-grid{
+    
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    overflow: auto;
+    grid-template-areas: 
+        "child-1 child-2" 
+        "child-3 child-4"
+        " child-5 child-6"
+    ;
+    height: 75%;
+}
+
+    /* les résultats des recherches*/
+    #containt-housing{
+
+        max-width: 100%;
+        min-width: 200px;
+        height: 90%;
+        background-color: #f2f2f2;
+        border-radius: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-right: 0px;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width: 980px){
+
+       /*Tableau des résultats*/
+       #accommodation-grid{
+    
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 0px;
+        column-gap: 5px;
+        
+    }
+
+}
+
 
 @media (max-width: 768px){
 
