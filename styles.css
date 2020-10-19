@@ -35,6 +35,15 @@ em{
     font-style: normal;
 }
 
+
+/* les notes étoiles*/
+
+.fa-star{
+
+    font-size:10px;
+    color: #0171ff; 
+}
+
 /*head*/
 
 header{
@@ -140,6 +149,7 @@ header > nav > #navigation{
     width: 450px;
     border: 1px solid #f2f2f2;
     border-radius: 20px;
+    overflow: hidden;
     outline: none;
 }
 
@@ -196,12 +206,12 @@ input{
 /*bouton de recherche*/
 .btn-filter{
 
-    position: relative;
     display: flex;
     width: auto;
     height: 50px;
     border: 2px solid #dbdbdb;
     border-radius: 50px;
+    overflow: hidden;
     margin-left: 25px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -218,6 +228,7 @@ input{
 
 }
 
+/*filtres de sélection*/
 #filter{
 
     display: flex;
@@ -271,6 +282,9 @@ input{
 /*texte des filtres*/
 .keywords{
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     font-weight: bolder;
@@ -289,15 +303,15 @@ input{
 #info-city{
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 450px;
+    width: auto;
 }
 
 #leter-i{
 
-    width: 25px;
-    height: 25px;
+    min-width: 20px;
+    min-height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,6 +319,13 @@ input{
     border: 1px solid #dbdbdb;
     border-radius: 50px;
     margin-right: 10px;
+    margin-left: 20px;
+}
+
+#leter-i > .fa-info{
+
+    font-size: 1rem;
+    color:#0171ff;
 }
 
 #info-city > p{
@@ -334,6 +355,7 @@ input{
     font-weight: 600;
     margin-left: 40px;
 }
+
 /* Bouton Afficher plus */
 #more{
 
@@ -351,7 +373,6 @@ input{
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-auto-flow: column;
     padding: 40px;
     row-gap: 5px;
     column-gap: 5px;
@@ -371,7 +392,7 @@ input{
     display: flex;
     margin: 5px;
     height: 200px;
-    min-width: 172px;
+    min-width: 170px;
     max-width: 250px;
     border: 3px solid #ffffff;
     border-radius: 25px;
@@ -399,14 +420,11 @@ input{
 
 .result-accommodation > .container-img-and-describe > .box-img{
 
-    
     display: flex;
     flex-direction: column;
     height: 65%;
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-    overflow: hidden;
 }
+
 /* Image du bien */
 .result-accommodation > .container-img-and-describe > .box-img > img{
 
@@ -433,16 +451,39 @@ input{
     font-size: 0.85rem;
 }
 
+/* les etoiles*/
 .location{
 
     font-weight: bolder;
 }
 
+#notes-result-1 > .fa-star:nth-child(5){
+
+    color: #dbdbdb;
+}
+
+#notes-result-3 > .fa-star:nth-child(5){
+
+    color: #dbdbdb;
+}
+
+#notes-result-4 > .fa-star:nth-child(4), #notes-result-4 > .fa-star:nth-child(5){
+
+    color: #dbdbdb;
+}
+
+#notes-result-5 > .fa-star:nth-child(5){
+
+    color: #dbdbdb;
+}
+
+
+
+/*Les plus populaires*/
 #most-popular{
 
     grid-area: most-popular;
     
-
 }
 
 #most-popular > #containt-popular{
@@ -462,8 +503,6 @@ input{
 }
 
 
-
-
 #most-popular > #containt-popular > #title-popular{
     display: flex;
     justify-content: space-between;
@@ -475,7 +514,13 @@ input{
     
 }
 
+.fa-chart-line{
 
+    font-size: 20px;
+    color: black;
+}
+
+/*tableau des plus populaires*/
 #container-popular{
 
     display: flex;
@@ -484,7 +529,6 @@ input{
     justify-content: center;
     height: 590px;
     min-width: 100px;
-
     justify-content: space-around;
 
 }
@@ -494,48 +538,72 @@ input{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    max-width: 450px;
-    min-width: 300px;
     height: 150px;
     border: 3px solid #ffffff;
     border-radius: 40px;
     text-decoration: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-repeat: no-repeat;
+    color: black;
+    overflow: hidden;
+
     
 }
 
-#container-popular > .result-popular:nth-child(1){
-
-    background-image: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
-    background-position: -40px 0px;
-    background-size: 50%;
-
-}
-
-#container-popular > .result-popular:nth-child(1):hover{
+#container-popular > .result-popular:hover{
 
     box-shadow: 0 0 5px rgba(0, 0, 0, 2);
+}
 
+/* image et description du bien populaire-1 */
+.result-popular > .img-and-describe-popular{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 35px;
+}
+
+.result-popular > .img-and-describe-popular > .box-img-popular{
+
+    display: flex;
+    min-width: 100px;
+    max-width: 40%;
+    height: 100%;
+}
+
+.result-popular > .img-and-describe-popular > .box-img-popular > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-.result-popular > .describe-popular{
+.result-popular >.img-and-describe-popular > .describe-popular{
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60%;
-    min-width: 210px;
-    background-color: #ffffff;
-    border-top-right-radius: 35px;
-    border-bottom-right-radius: 35px;
-
-
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 10px;
+    min-width: 100px;
+    height: 100%;
+    
 }
 
-.result-popular > .describe-popular > .information, .notes-stars{
+.result-popular >.img-and-describe-popular > .describe-popular > .information-popular{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 0.85rem;
+}
+
+.result-popular > .describe-popular > .information-popular > .notes-stars{
 
     margin-left: 40px;
     background-size: cover;
@@ -544,14 +612,18 @@ input{
     color: black;
 }
 
+#notes-popular-2 > .fa-star:nth-child(5){
+    color: #dbdbdb;
+}
 
-
+#notes-popular-3 > .fa-star:nth-child(5){
+    color: #dbdbdb;
+}
 
 #section-4{
 
     grid-area: section-4;
     background-color: yellow;
-
 }
 
 @media (max-width: 1200px){
@@ -635,15 +707,6 @@ input{
     /*texte des filtres*/
     
 
-    .keywords:hover{
-
-        
-        display: block;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-weight: bolder;
-        }
-
     /*Tableau des résultats*/
     #accommodation-grid{
     
@@ -654,6 +717,7 @@ input{
     column-gap: 5px;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
+    padding: 10px;
     overflow: auto;
     grid-template-areas: 
         "child-1 child-2" 
@@ -678,6 +742,15 @@ input{
         justify-content: space-around;
         align-items: center;
     }
+
+    #containt-housing > p{
+
+        font-size: 1.2rem;
+        position: relative;
+        font-weight: 600;
+        justify-self: center;
+        margin-left: 0px;
+        }
 }
 
 @media (max-width: 980px){
@@ -692,45 +765,219 @@ input{
         
     }
 
+    /*bouton de recherche*/
+.btn-filter{
+
+    display: flex;
+    width: auto;
+    height: 50px;
+    border: 2px solid #dbdbdb;
+    border-radius: 50px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;   
+    
+}
+
+    /*texte des filtres*/
+    .keywords{
+
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bolder;
+        font-size: 0.8rem;
+        }
+
+    /* Résultat des recherches */
+    #containt-housing{
+
+    min-width: 320px;
 }
 
 
-@media (max-width: 768px){
+
+}
 
 
-    #containeur{
+@media (max-width: 769px){
+    
+
+    /*filtres de sélection*/
+    #filter > p{
+        font-size: 0.9rem;
+
+
+    }
 
     
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 90px 270px 745px 573px 209px;
-        grid-template-areas:
-            "head head"
-            "section-1 section-1"
-            "section-2 section-2"
-            "section-3 section-3"
-            "section-4 section-4"
-            "footer footer";
+    
+    /* Résultat des recherches */
+
+    #section-housing-result{
+
+        margin-left: 0px;
+        margin-right: 0px;
     }
+    #containt-housing{
+
+        min-width: 100px;
+
+    }
+
+    #containt-housing > p{
+        font-size: 0.9rem;
+    }
+
+
+    /*Info sur les biens disponilbes dans la ville*/
+    #info-city{
+
+        font-size: 0.9rem;
+    }
+
+
+    
+
+
+    /*Tableau des résultats*/
+    .result-accommodation{
+
+        min-width: 190px;
+        min-height: auto;
+
+    }
+
+
+    /*Les plus populaires*/
+    #most-popular > #containt-popular{
+        
+        padding-left:10px;
+        padding-right: 10px;
+
+    }
+
+    #most-popular > #containt-popular > #title-popular{
+
+        font-size: 0.9rem;
+    }
+
+
+    /*tableau des plus populaires*/
+
+    
+    #container-popular > .result-popular{
+
+        max-height: 135px;
+        max-width: 250px;
+    }
+
+    .result-popular >.img-and-describe-popular > .describe-popular{
+
+        padding-left: 10px;
+        
+
+    }
+
+
+
 
 
 }
 
 @media (max-width: 576px){
 
+    .placement{
+
+        margin: 0px;
+    }
     #containeur{
 
     
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 90px 270px 745px 573px 209px;
+        grid-template-columns: 1fr;
+        grid-template-rows:  130px 2fr 2fr 1fr 1fr;
         grid-template-areas:
-            "head head"
-            "section-1 section-1"
-            "section-2 section-2"
-            "section-3 section-3"
-            "section-4 section-4"
-            "footer footer";
+            "head"
+            "section-research"
+            "section-housing-result"
+            "most-popular"
+            "section-4 "
+            "footer";
     }
+
+    /*head*/
+
+
+    /* navigateur du site */
+
+    header{
+
+        justify-content: flex-start;
+    }
+
+
+    header > nav{
+
+        display: flex;
+        
+        width: 100%;
+        height: 100px;
+        margin-right: 0px;
+        margin-left: 0px;
+
+    }
+
+    header > nav > #logo-reservia{
+
+        align-self: flex-start;
+        margin-left: 5%;
+    }
+
+
+
+    #navigation > li :hover{
+
+        padding-top: 0px;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+    
+    #navigation > li :active{
+    
+        padding-top: 0px;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        color:  #0065FC;
+    }
+    
+    #navigation > li :visited{
+    
+        padding-top: 0px;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        color:  #0065FC;
+    }
+
+    header > nav > #navigation{
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+    header > nav > #navigation > .naviga:nth-child(3){
+
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+
+   
+
+
+
+    
 
 }
