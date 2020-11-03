@@ -13,20 +13,18 @@
         <div id="containeur">
 
             <header>
-                
-                
-                
+                  
                 <!--navigateur du site-->
                 <nav class="placement">
 
                     <img src="images/logo/Reservia.svg" alt="logo-reservia" id="logo-reservia">
 
                     <ul id= "navigation">
-                        <li class="naviga"><a href="#">Hébergements</a></li>
-                        <li class="naviga"><a href="#">Activités</a></li>
-                        <li class="naviga"><a href="#">S'inscrire</a></li>
+                        <li class="naviga"><a href="#section-housing-result">Hébergements</a></li>
+                        <li class="naviga"><a href="#activity">Activités</a></li>
                     </ul>
 
+                    <a href="#" id = "subsrcibe">S'inscrire</a>
                 </nav>
 
             </header>
@@ -36,13 +34,12 @@
 
                 <div id="research" class="placement">
 
-                    <p><em>Trouvez votre hébergement pour des vacances de rêve</em><br/>
-                    En plein centre ville ou en pleine nature</p>
-                    
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre ville ou en pleine nature</p>
 
                     <div class="search">
 
-                        <div class ="search-box">
+                        <form class ="search-box">
 
                             <!--logo de position-->
                             <div class="position">
@@ -54,13 +51,13 @@
                             <input type="search" id="city-search" name="q" placeholder="Marseille, France">
 
                             <!--bouton recherche-->
-                            <div class="recherche">
-                                
-                                <button class="btn">Rechercher</button>
+                            
+                                <input type="submit" value="Rechercher">
 
-                            </div>
+                                <button id="button"><i class="fa fa-search"></i></button>
 
-                        </div>
+
+                        </form>
                 
                     </div>
 
@@ -142,7 +139,7 @@
                 <!--Résultat des hébergements dispo dans la ville rechercher-->
                 <div id="containt-housing" class="placement">
 
-                    <p>Hébergements à Marseille</p>
+                    <h2>Hébergements à Marseille</h2>
 
                     <!--Tableau des résultats-->
                     <div id="accommodation-grid">
@@ -339,7 +336,6 @@
 
                 </div>
 
-
             </section>
 
             <!--Les plus populaires-->
@@ -349,7 +345,7 @@
 
                     <div id="title-popular">
                         
-                        <p>Les plus populaires</p>
+                        <h2>Les plus populaires</h2>
 
                         <i class='fas fa-chart-line'></i>
                     </div>
@@ -460,14 +456,163 @@
                 </div>
 
             </aside>
+            <!--Section-activités-->
+            <section id="activity">
 
-            <section id="section-4">
+                <div id="container-activity">
+                        <h2>Activités à Marseille</h2>
+
+                        <div id="containt-activity">
+                            
+                            <!-- activity-1 -->
+                            <a href="#" id="activity-1" class="activity-box">
+
+                                <!--image et description des lieux-1-->
+                                <div class="container-img-and-describe">
+                                    <!--image des lieux -->
+                                    <div class="box-img-activity"> 
+
+                                        <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
+                                        alt="image-Vieux-Port">
+
+                                    </div>
+
+                                    <!--nom des leux-->
+                                    <div class="box-describe-activity">
+                                        <P>Vieux Port</P>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- activity-2 -->
+                            <a href="#" id="activity-2" class="activity-box">
+
+                                <!--image et description des lieux-2-->
+                                <div class="container-img-and-describe">
+                                    <!--image des lieux -->
+                                    <div class="box-img-activity">
+
+                                        <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
+                                        alt="image-Fort-de-Pomégues">
+
+                                    </div>
+
+                                    <!--nom des leux-->
+                                    <div class="box-describe-activity">
+                                        <p>Fort de Pomégues</p>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- activity-3 -->
+                            <a href id="activity-3" class="activity-box">
+
+                                <!--image et description des lieux-3-->
+                                <div class="container-img-and-describe">
+                                    <!--image des lieux -->
+                                    <div class="box-img-activity">
+
+                                        <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" 
+                                        alt="image-îles-du-Frioul">
+                                    </div>
+
+                                    <!--nom des leux-->
+                                    <div class="box-describe-activity">
+                                        <p>îles du Frioul</p>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- activity-4 -->
+                            <a href="#" id="activity-4" class="activity-box">
+
+                                <!--image et description des lieux-4-->
+                                <div class="container-img-and-describe">
+                                    <!--image des lieux -->
+                                    <div class="box-img-activity">
+
+                                        <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
+                                        alt="image-Parc-National-des-Calanques">
+
+                                    </div>
+                                    <!--nom des leux-->
+                                    <div class="box-describe-activity">
+                                        <p>Parc National des Calanques</p>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- activity-5 -->
+                            <a href="#" id="activity-5" class="activity-box">
+
+                                <!--image et description des lieux-5-->
+                                <div class="container-img-and-describe">
+                                    <!--image des lieux -->
+                                    <div class="box-img-activity">
+
+                                        <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" 
+                                        alt="image-Notre-Dame-de-la-Garde">
+
+                                    </div>
+
+                                    <!--nom des leux-->
+                                    <div class="box-describe-activity">
+                                        <p>Notre-Dame-de-la-Garde</p>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- activity-6 -->
+                            <a href="#" id="activity-6" class="activity-box">
+
+                                <!--image et description des lieux-6-->
+                                <div class="container-img-and-describe">
+
+                                    <!--image des lieux -->
+                                    <div class="box-img-activity">
+
+                                        <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
+                                        alt="image-Parc-Longchamp">
+
+                                    </div>
+                                    
+                                    <!--nom des leux-->
+                                    <div class="box-describe-activity">
+                                        <p>image-Parc Longchamp</p>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                </div>
 
             </section>
 
-
+            <!--le footer-->
             <footer>
+                
+                <div class="footer-container">
+                    <h3>A propos</h3>
+                    <a href="#" class="footer-option">Fonction du site</a>
+                    <a href="#" class="footer-option">Condition générales de vente</a>
+                    <a href="#" class="footer-option">Données et confidentialité</a>
+                </div>
 
+                <div class="footer-container">
+                        <h3>Nos hébergements</h3>
+                        <a href="#" class="footer-option">Charte qualité</a>
+                        <a href="#"class="footer-option">Soumettre votre hôtel</a>
+                </div>
+
+                <div class="footer-container">
+                    <h3>Assistance</h3>
+                    <a href="#" class="footer-option">Centre d'aide</a>
+                    <a href="#" class="footer-option">Nous contacter</a>
+                </div>
+                        
             </footer>
         </div>
     </body>
