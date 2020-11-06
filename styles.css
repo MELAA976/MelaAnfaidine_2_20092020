@@ -14,7 +14,7 @@ body{
     -ms-grid-columns: 2fr 1fr;
     grid-template-columns: 2fr 1fr;
     -ms-grid-rows: 90px 270px 745px 600px 220px;
-    grid-template-rows: 90px 270px 745px 600px 220px;
+    grid-template-rows: 90px 330px 745px 600px 220px;
         grid-template-areas:
         "head head"
         "section-research section-research"
@@ -23,7 +23,7 @@ body{
         "footer footer";
 }
 
-/* Assignation de marge de 53px a droite et à gauche*/
+/* Assignation de marge de 20px a droite et à gauche*/
 .placement{
 
     margin-left: 20px;
@@ -153,7 +153,6 @@ header > nav > #subsrcibe{
 #section-research > #research > p{
 
     font-size: 0.9rem;
-    font-weight: lighter;
     line-height: 1.5;
 }
 
@@ -172,7 +171,7 @@ header > nav > #subsrcibe{
         -ms-flex-align: center;
             align-items: center;
     height: 50px;
-    width: 450px;
+    max-width: 450px;
     border: 1px solid #f2f2f2;
     border-radius: 15px;
     overflow: hidden;
@@ -229,7 +228,6 @@ input[type="submit"]:hover{
 
 
 input{
-    padding: 5px;
     border: none;
     outline: none;
     font-size: 1.1rem;
@@ -408,11 +406,6 @@ input{
     color:#0171ff;
 }
 
-#info-city > p{
-
-    font-weight: lighter;   
-}
-
 /* Résultat des recherches */
 #containt-housing{
 
@@ -430,7 +423,6 @@ input{
     flex-direction: column;
     margin-right: 0px;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
 }
 
 #containt-housing > h2{
@@ -476,7 +468,7 @@ input{
     grid-template-rows: 50% 50%;
     -ms-grid-columns: 33.33% 5px 33.33% 5px 33.33%;
     grid-template-columns: 33.33% 33.33% 33.33%;
-        grid-template-areas: 
+            grid-template-areas: 
         "child-1 child-2 child-3"
         "child-4 child-5 child-6"
     ;
@@ -547,7 +539,6 @@ input{
 
 
     width: 100%;
-    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
 }
@@ -569,7 +560,6 @@ input{
     height: 35%;
     background-color: #ffffff;
     padding-left: 20px;
-    
 }
 
 .information{
@@ -628,7 +618,6 @@ input{
         justify-content: space-around;
     width: auto;
     height: 90%;
-    margin-top: 50px;
     margin-left: 0px;
     padding-left:40px;
     padding-right: 40px;
@@ -640,7 +629,7 @@ input{
 
 #most-popular > #containt-popular > #title-popular{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     
@@ -792,9 +781,7 @@ input{
 
 .describe-popular > .information-popular > .price{
 
-    font-size: 0.8rem;
-    font-weight: 100;
-
+    font-size: 0.9rem;
 }
 
 .notes-stars{
@@ -986,7 +973,8 @@ footer{
 
     text-decoration: none;
     color: black;
-    line-height: 2.5;
+    line-height: 2;
+    font-size: 0.95rem;
 }
 
 .footer-option:hover{
@@ -1006,9 +994,9 @@ footer{
         display: grid;
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        -ms-grid-rows: 90px 300px 745px 573px 209px;
-        grid-template-rows: 90px 300px 745px 573px 209px;
-            grid-template-areas:
+        -ms-grid-rows: 90px 370px 745px 573px 209px;
+        grid-template-rows: 90px 370px 745px 573px 209px;
+                grid-template-areas:
             "head head"
             "section-research section-research"
             "section-housing-result most-popular"
@@ -1090,9 +1078,7 @@ footer{
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        font-weight: lighter;
         line-height: 1.5;
-    
     }
 
     #filter{
@@ -1116,7 +1102,10 @@ footer{
 
     /*texte des filtres*/
     
-
+    #info-city{
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    }
     /*Tableau des résultats*/
     #accommodation-grid{
     
@@ -1137,34 +1126,22 @@ footer{
     grid-template-columns: 50% 50%;
     padding: 10px;
     overflow: auto;
-        grid-template-areas: 
+            grid-template-areas: 
         "child-1 child-2" 
         "child-3 child-4"
         " child-5 child-6"
     ;
-    height: 75%;
     }
 
     /* les résultats des recherches*/
     #containt-housing{
 
-        max-width: 100%;
         min-width: 200px;
-        height: 90%;
-        background-color: #f2f2f2;
-        border-radius: 40px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
         margin-right: 0px;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -1172,15 +1149,12 @@ footer{
 
     #containt-housing > h2{
 
-        position: relative;
         margin-left: inherit;
         -ms-grid-column-align: center;
             justify-self: center;
         padding-left: inherit;
         }
 
-
-    
     /*grille des activites*/
     #containt-activity{
 
@@ -1189,7 +1163,7 @@ footer{
     grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
+            grid-template-areas: 
         "activity-1 activity-2 activity-3"
         "activity-4 activity-5 activity-6";
     }
@@ -1202,6 +1176,23 @@ footer{
 }
 
 @media (max-width: 980px){
+
+
+    #containeur{
+
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: 90px 300px 745px 573px 209px;
+        grid-template-rows: 90px 370px 680px 573px 209px;
+            grid-template-areas:
+            "head head"
+            "section-research section-research"
+            "section-housing-result most-popular"
+            "activity activity"
+            "footer footer";
+    }
+
 
     /*Tableau des résultats*/
     #accommodation-grid{
@@ -1278,10 +1269,6 @@ footer{
         margin-right: 0px;
     }
 
-    #info-city > p{
-
-        font-size: 0.9rem;  
-    }
     #containt-housing{
 
         min-width: 100px;
@@ -1290,6 +1277,20 @@ footer{
 
 
     /*Info sur les biens disponilbes dans la ville*/
+
+    #containeur{
+
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: 90px 300px 745px 573px 209px;
+        grid-template-rows: 90px 400px 745px 573px 209px;
+            grid-template-areas:
+            "head head"
+            "section-research section-research"
+            "section-housing-result most-popular"
+            "activity activity"
+            "footer footer";
+    }
     
     /*Tableau des résultats*/
     .result-accommodation{
@@ -1332,9 +1333,7 @@ footer{
     
     .describe-popular > .information-popular > .price{
     
-        font-size: 0.7rem;
-        font-weight: 100;
-    
+        font-size: 0.8rem;    
     }
 
     #container-activity > h2{
@@ -1381,9 +1380,9 @@ footer{
         display: grid;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        -ms-grid-rows:  130px 430px 670px 1fr 1fr;
-        grid-template-rows:  130px 430px 670px 1fr 1fr;
-            grid-template-areas:
+        -ms-grid-rows:  130px 490px 670px 1fr 1fr;
+        grid-template-rows:  130px 490px 670px 1fr 1fr;
+                grid-template-areas:
             "head"
             "section-research"
             "most-popular"
@@ -1544,6 +1543,7 @@ footer{
 
     input[type="submit"]{
         display: none;
+        font-size: 1rem;
     }
 
     #button{
@@ -1599,29 +1599,28 @@ footer{
 
             -ms-flex-pack: start;
 
-                justify-content: flex-start;
-        height: 220px;
+            justify-content: flex-start;
     }
 
     #filter > p{
 
         margin-left: 20px;
-        width: 100%;
+        width: 90%;
         font-size: 1rem;
         font-weight: bold;
-    }
-
-    /*Info sur les biens disponilbes dans la ville*/
-    #info-city{
-
-        position: absolute;
-        top: 550px;
     }
 
     /* Résultat des recherches */
     #containt-housing{
 
         background-color: inherit;
+
+    }
+
+    /*Tableau des résultats*/
+    #accommodation-grid{
+
+        overflow: inherit;
 
     }
 
@@ -1659,12 +1658,6 @@ footer{
     
     }
     
-    .describe-popular > .information-popular > .price{
-    
-        font-size: 0.8rem;
-        font-weight: 100;
-    
-    }
 
     #container-activity{
         display: -webkit-box;
@@ -1683,7 +1676,7 @@ footer{
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-            grid-template-areas: 
+                grid-template-areas: 
             "activity-1"
             "activity-2"
             "activity-3"
@@ -1718,5 +1711,71 @@ footer{
 
         line-height: 1.5;
     }
+}
+
+@media (max-width: 401px){
+
+    #containeur{
+
+    
+        display: -ms-grid;
+
+    
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows:  130px 550px 670px 1430px 1350px;
+        grid-template-rows:  130px 550px 670px 1430px 1350px;
+                    grid-template-areas:
+            "head"
+            "section-research"
+            "most-popular"
+            "section-housing-result"
+            "activity"
+            "footer";
+    }
+
+    /*<!bar de recherche et filtres*/
+    #city-search{
+        width: 260px;
+    }
+
+    /* info sur les biens disponibles dans la ville*/
+    #info-city > p{
+        font-size: 1rem;
+    }
+
 
 }
+
+@media (max-width: 362px){
+
+    #containeur{
+
+    
+        display: -ms-grid;
+
+    
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows:  130px 640px 670px 1430px 1350px;
+        grid-template-rows:  130px 640px 670px 1430px 1350px;
+                    grid-template-areas:
+            "head"
+            "section-research"
+            "most-popular"
+            "section-housing-result"
+            "activity"
+            "footer";
+    }
+
+    #city-search{
+        margin-left: inherit;
+        text-align: center;
+        padding-left: inherit;
+    }
+}
+
+
+
