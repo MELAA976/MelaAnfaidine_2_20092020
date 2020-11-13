@@ -29,6 +29,8 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
+
+/*les titres*/
 h1{
 
     font-weight: bold;
@@ -37,15 +39,14 @@ h1{
 }
 
 h2{
+    font-weight: bold;
     font-size: 1.2rem;
-    font-weight: 600;
 }
 
 /* les notes étoiles*/
 
 .fa-star{
-
-    font-size:10px;
+    font-size: 10px;
     color: #0171ff; 
 }
 
